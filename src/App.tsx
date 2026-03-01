@@ -17,7 +17,12 @@ interface Message {
 }
 
 export default function App() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: 'model',
+      content: "Hello there! I'm ProfX, your personal Physics Specialist. Whether it's Classical Mechanics, Quantum Physics, or General Relativity, I'm here to help. What physics concept would you like to explore today? \n\n(আপনি চাইলে বাংলায়ও প্রশ্ন করতে পারেন!)"
+    }
+  ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
